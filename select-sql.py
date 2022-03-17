@@ -33,7 +33,7 @@ track_avg_duration = connection.execute("""
 """).fetchall()
 print(track_avg_duration)
 
-# # Добавлен в INSERT-запросы еще один альбом для исполнителя Adam Lambert, чтобы разнообразить БД
+# Добавлен в INSERT-запросы еще один альбом для исполнителя Adam Lambert, чтобы разнообразить БД
 mus_not_released = connection.execute("""
     SELECT musician.name
     FROM musician
@@ -57,8 +57,8 @@ coll_musician_names = connection.execute("""
     WHERE musician.name = 'Queen'
 """).fetchall()
 print(coll_musician_names)
-#
-# # Добавлен еще один жанр для исполнителя Queen, чтобы разнообразить БД
+
+# Добавлен еще один жанр для исполнителя Queen, чтобы разнообразить БД
 alb_genre_names = connection.execute("""
     SELECT album.name
     FROM genremusician
@@ -69,7 +69,7 @@ alb_genre_names = connection.execute("""
 """).fetchall()
 print(alb_genre_names)
 
-# # Добавлен трек в альбом Velvet, чтобы разнообразить БД
+# Добавлен трек в альбом Velvet, чтобы разнообразить БД
 track_not_in_collection = connection.execute("""
     SELECT track.name
     FROM track
@@ -86,7 +86,6 @@ musician_name_duration = connection.execute("""
     WHERE track.duration = (SELECT MIN(duration) FROM track)
 """).fetchall()
 print(musician_name_duration)
-
 
 # Посчитал минимальное количество треков в подзапросе - даже если изменится количество треков в альбоме
 # минимум тоже изменится, а во внешнем запросе сравнил актуальное количество треков альбомов с минимальным
