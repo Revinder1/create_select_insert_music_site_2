@@ -87,7 +87,7 @@ connection.execute("""
     VALUES(%s, %s);
 """, trackcoll)
 
-Добавлен еще один альбом для исполнителя Adam Lambert, чтобы разнообразить БД
+# Добавлен еще один альбом для исполнителя Adam Lambert, чтобы разнообразить БД
 
 connection.execute("""
     INSERT INTO
@@ -107,7 +107,7 @@ connection.execute("""
     VALUES(9, 2);
 """)
 
-Добавлен еще один жанр для исполнителя Queen, чтобы разнообразить БД
+# Добавлен еще один жанр для исполнителя Queen, чтобы разнообразить БД
 
 connection.execute("""
     INSERT INTO
@@ -115,7 +115,7 @@ connection.execute("""
     VALUES(2, 4)
 """)
 
-Добавлен трек в альбом Velvet, чтобы разнообразить БД
+# Добавлен трек в альбом Velvet, чтобы разнообразить БД
 
 connection.execute("""
     INSERT INTO
